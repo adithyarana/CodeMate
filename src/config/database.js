@@ -1,15 +1,11 @@
 const mongoose = require("mongoose");
 
-const conntdb = async () => {
+const connectdb = async () => {
     try {
 
         const connect = await mongoose.connect(
             // url 
         )
-
-        if (connect) {
-            console.log("Database is connected !")
-        }
 
     } catch (error) {
         console.log("database cannot be connected !");
@@ -17,4 +13,4 @@ const conntdb = async () => {
     }
 }
 
-module.export = conntdb();
+module.exports = connectdb;
